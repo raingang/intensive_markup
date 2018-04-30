@@ -3,16 +3,26 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Open Sans';
-    width: 1200px;
     margin: 0 auto;
 }
+
 .wrapper{
     padding: 0px;
     width: 1000px;
     margin: 0 auto;
 }
+
+.page__header{
+    transition-property: position;
+    transition-duration: 3s;
+    background-color: #757575;
+}
+.page__header--fixed{
+    position: fixed;
+    width: 100%;
+}
 .page__section{
-    padding: 110px 100px;
+    padding: 110px 0px;
 }
 .page__section--dark{
     background-color: #282828;
@@ -43,20 +53,28 @@ h4{
 p{
     margin: 0px;
 }
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+@media all and (max-width: 1280px) { 
+    html{
+        font-size: 16px;
+    }
+    .page__section{
+        padding: 40px 0;
+    }
+    .page__section--small{
+        padding: 36px 0px;
+    }
+    .wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 /* HEADER */
 
 .header{
-    padding: 0px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #757575;
-    height: 65px;
+    min-height: 65px;
 }
 .navigation__list{
     list-style: none;
@@ -81,10 +99,19 @@ p{
     text-decoration: none;
     color: #fff;
 }
+@media all and (max-width: 1280px) { 
+    .header{
+        padding: 0 5%;
+    }
+    .navigation__item{
+        font-size: 0.8rem;
+        margin-right: 3px;
+    }
+}
 /* SLIDER */
 
 .slider{
-    height: 432px;
+    min-height: 432px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -121,6 +148,7 @@ p{
     display: flex;
 }
 .slide__content{
+    background-color: #fff;
     width: 320px;
     padding-left: 107px;
     padding-top: 108px;
@@ -140,6 +168,45 @@ p{
     display: block;
     margin-top: 45px;
 }
+@media all and (max-width: 1280px) { 
+    .slider{
+    flex-direction: column;
+    }
+    .slider__previews{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .slider__slide_preview{
+        height: 50px;
+        width: 33.33%;
+        overflow: hidden;
+    }
+    .slider__preview-image{
+        width: 100%;
+    }
+    .slide{
+        display: block;
+        width: 100%;
+    }
+    .slide__content{
+        width: 100%;
+        padding: 0px;
+    }
+    .slide__media{
+        display: none;
+    }
+    .slide__title{
+        padding-left: 20px;
+    }
+    .slide__description{
+        display: block;
+        margin-left: 20px;
+    }
+    .slide__button{
+        margin: 20px;
+    }
+}
 
 /* ABOUT SECTION */
 .about{
@@ -148,7 +215,6 @@ p{
 .about__title{
     padding: 40px 0px 18px 0px;
     font-weight: 600;
-    line-height: 0.6;
 }
 .about__points{
     list-style-image: url(img/checked.png);
@@ -187,6 +253,21 @@ p{
 }
 .point::before{
 }
+@media all and (max-width: 1280px) { 
+    .about__points{
+        display: block;
+        padding: 0px;
+        width: 100%;
+    }
+    .point{
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    .about__title{
+        line-height: 40px;
+    }
+}
 
 /* GALLERY */
 
@@ -197,7 +278,7 @@ p{
     justify-content: space-between;
 }
 .gallery__item{
-    height: 180px;
+    min-height: 180px;
     margin-bottom: 20px;
 }
 .gallery__item--active{
@@ -225,12 +306,23 @@ p{
     text-transform: uppercase;
     font-weight: bold;
     color: #757575;
-    padding: 10px 0px 15px;
+    margin: 10px 0px 15px;
 }
 .gallery__main-text{
     font-size: 10px;
     line-height: 1.6;
     color: #757575;
+}
+@media all and (max-width: 1280px) { 
+    .gallery{
+        display: flex;
+    }
+    .gallery__item{
+        margin: 0 auto;
+    }
+    .gallery__item--active{
+        order: 1;
+    }
 }
 
 /* PRICING */
@@ -294,6 +386,17 @@ p{
 .tariff__button--active{
     color: #51b736;
 }
+@media all and (max-width: 1280px) { 
+    .tariffs{
+        width: 100%;
+        display: block;
+    }
+    .tariff{
+        margin: 0 auto;
+        width: 320px;
+        margin-bottom: 40px;
+    }
+}
 
 /* SUBSCRIBE */
 .subscribe{
@@ -332,6 +435,17 @@ p{
 }
 .button:hover{
     background-color: #61b776;
+}
+
+@media all and (max-width: 1280px) { 
+    .subscribe{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .subscribe__input{
+        width: 100%;
+    }
 }
 /* INFO */
 .info{
@@ -396,6 +510,24 @@ p{
     display: inline-block;
     font-size: 12px;
     color: #757575;
+}
+@media all and (max-width: 1280px) { 
+    .info{
+        width: 100%;
+        display: block;
+    }
+    .info__communications{
+        width: 100%;
+    }
+    .info__feedback{
+        width: 100%;
+    }
+    .location__image{
+        width: 100%;
+    }
+    .feedback__input{
+        width: 80%;
+    }
 }
 /* FOOTER */
 .footer{

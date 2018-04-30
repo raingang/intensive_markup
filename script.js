@@ -1,18 +1,14 @@
-const tariffs = document.getElementById('tariffs')
-
-tariffs.onmouseover = event => {
-    let target = event.target
-    while (target.tagName !== 'LI'){
-        target = target.parentNode
+console.log('hello')
+const footerElem = document.getElementById('footer')
+const headerElem = document.getElementById('header')
+window.onscroll = (e) => {
+    console.log(document.body.getBoundingClientRect().top)
+    if(headerElem.getBoundingClientRect().bottom < window.pageYOffset - 40){
+        headerElem.classList.contains('page__header--fixed') ? null : headerElem.classList.add('page__header--fixed')
     }
-    target.classList.add('tariff--active')
-}
-
-
-tariffs.onmouseout = event => {
-    let target = event.target
-    while (target.tagName !== 'LI'){
-        target = target.parentNode
+    else{
+        headerElem.classList.contains('page__header--fixed') ? headerElem.classList.remove('page__header--fixed') : null
+        
     }
-    target.classList.remove('tariff--active')
-}
+    
+} 

@@ -10,8 +10,9 @@
     <title>Title</title>
 </head>
 <body class = 'page'>
-
-<header class='page__header header'>
+<header id = 'header' class='page__header'>
+    <div class = 'wrapper'>
+    <div class = 'header'>
     <div class='header__item header__logo'>
         <a href = '#' class = 'header__link'><img src="http://via.placeholder.com/34x33" alt='logo'/></a>
     </div>
@@ -27,11 +28,14 @@
     <div class='header_item header__auth'>
         <a href = '#' class = 'header__link'><i class="fas fa-user"></i></a>
     </div>
+    </div>
+    </div>
 </header>
 
 <main class = 'page__main'>
 <section class = 'page__section page__section--dark'>
-<div class='slider'>
+<div class = 'wrapper'>
+<div class = 'slider'>
         <ul class='slider__previews'>
             <li class='slider__slide_preview slider__slide_preview--active'>
                 <p class='slide_preview__content'>
@@ -40,11 +44,11 @@
             </li>
 
             <li class='slider__slide_preview'>
-                <img src='http://via.placeholder.com/235x142' alt='slide preview'/>
+                <img class = 'slider__preview-image' src='http://via.placeholder.com/235x142' alt='slide preview'/>
             </li>
 
             <li class='slider__slide_preview'>
-                <img src='http://via.placeholder.com/235x142' alt='slide preview'/>
+                <img class = 'slider__preview-image' src='http://via.placeholder.com/235x142' alt='slide preview'/>
             </li>
 
         </ul>
@@ -57,14 +61,16 @@
         </span>
                 <button class='button slide__button'>Button</button>
             </div>
-            <div class='slide__image'>
-                <img src='http://via.placeholder.com/340x432' alt='slide-image'/>
+            <div class='slide__media'>
+                <img class = 'slide__image' src='http://via.placeholder.com/340x432' alt='slide-image'/>
             </div>
         </div>
 
 </div>
+</div>
 </section>
 <section class = 'page__section page__section--white'>
+<div class = 'wrapper'>
 <div class='about'>
     <div class='about__image'>
         <img src='http://via.placeholder.com/49x39' />
@@ -129,8 +135,10 @@
 
     </ul>
 </div>
+</div>
 </section>
 <section class = 'page__section page__section--dark'>
+    <div class = 'wrapper'>
     <div class = 'gallery'>
         <div class='gallery__item'>
             <img class='gallery__image' src='http://via.placeholder.com/235x220' alt='image'/>
@@ -166,8 +174,10 @@
             <img class='gallery__image' src='http://via.placeholder.com/235x220' alt='image'/>
     </div>
     </div>
+    </div>
 </section>
 <section class = 'page__section page__section--white'>
+<div class = 'wrapper'>
 <div class='pricing'>
     <h2 class = 'pricing__title'>Price</h2>
     <ul id = 'tariffs' class = 'tariffs'>
@@ -296,8 +306,10 @@
 
     </ul>
 </div>
+</div>
 </section>
 <section class = 'page__section page__section--dark page__section--small'>
+<div class = 'wrapper'>
 <div class='subscribe'>
     <span class='subscribe__text'>Subscribe</span>
     <form class='subscribe__form'>
@@ -305,8 +317,10 @@
         <button class='subscribe__button button'>Subscribe</button>
     </form>
 </div>
+</div>
 </section>
 <section class = 'page__section page__section--white'>
+<div class = 'wrapper'>
 <div class='info'>
     <div class='info__communications'>
         <div class='location'>
@@ -339,10 +353,13 @@
         <button class='feedback__button button'>Button</button>
     </form>
 </div>
+</div>
 </section>
 </main>
 
-<footer class='footer  page__section--small'>
+<footer id = 'footer' class='page__section--small'>
+    <div class = 'wrapper'>
+    <div class = 'footer'>
     <nav class='navigation footer__navigation'>
         <ul class='navigation__list'>
             <li class='navigation__item'><a href = '#' class = 'navigation__link'>About</a></li>
@@ -364,7 +381,9 @@
             <i class="fab fa-behance-square social__icon social__icon--facebook"></i>
         </a>
     </div>
+    </div>
+    </div>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
